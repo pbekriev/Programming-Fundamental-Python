@@ -8,4 +8,5 @@ while people_list:
         killed_index = killed_index % len(people_list)
     killed_people.append(people_list[killed_index])
     people_list.__delitem__(killed_index)
-print([int(x) for x in killed_people])
+killed_people = [int(x) for x in killed_people]
+print(str(killed_people).replace(" ", ""))
