@@ -10,13 +10,12 @@ for item_and_price in collection_of_item:
             (item == "Shoes" and price <= 35.00) or \
             (item == "Accessories" and price <= 20.50):
         if budget >= price:
-            budget -= round(price, 2)
-            profit += round((price * 0.4), 2)
-            bought_item_price.append(round((price * 1.4), 2))
-    if budget + sum(bought_item_price) >= 150:
-        break
-list_of_sales = [str(round(sale, 2)) for sale in bought_item_price]
-print(" ".join(list_of_sales))
+            budget -= price
+            profit += price * 0.4
+            bought_item_price.append(price * 1.4)
+for prices in bought_item_price:
+    print(f"{prices:.2f}", end=" ")
+print()
 print(f"Profit: {profit:.2f}")
 if budget + sum(bought_item_price) >= 150:
     print("Hello, France!")
