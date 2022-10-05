@@ -40,9 +40,9 @@ while "end" not in command:
                     print(even_list[:int(command[1])])
             else:
                 if "odd" in command:
-                    print(odd_list[:int(command[1])])
+                    print(odd_list[-int(command[1]):])
                 elif "even" in command:
-                    print(even_list[:int(command[1])])
+                    print(even_list[-int(command[1]):])
         else:
             print("Invalid count")
     list_of_numbers = exchange_list
