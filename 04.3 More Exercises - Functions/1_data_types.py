@@ -2,7 +2,7 @@ def data_type(type, data):
     if type == "int":
         return int(data) * 2
     elif type == "real":
-        return f"{(int(data) * 1.5):.2f}"
+        return f"{(float(data) * 1.5):.2f}"
     else:
         return f"${data}$"
 
