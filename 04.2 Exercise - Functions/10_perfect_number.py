@@ -7,5 +7,6 @@ def is_perfect(num):
         return "We have a perfect number!"
     return "It's not so perfect."
 
+
 number = int(input())
 print(is_perfect(number))

@@ -15,6 +15,7 @@ def password_validation(some_password):
         pass_is_valid = False
     return pass_is_valid
 
+
 password = input()
 password_is_valid = password_validation(password)
 if password_is_valid:
@@ -43,5 +44,3 @@ if password_is_valid:
 #     print("Password is valid")
 # else:
 #     print('\n'.join(password_is_not_valid))
-
-

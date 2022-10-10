@@ -3,6 +3,7 @@ def factorial(number):
         number *= num
     return number
 
+
 first_number = int(input())
 second_number = int(input())
 first_number_factorial = factorial(first_number)
