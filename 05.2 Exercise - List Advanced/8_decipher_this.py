@@ -8,9 +8,7 @@ def decipher(word_for_decipher):
             string += digit
     if len(string) > 1:
         string_list = [x for x in string]
-        temp = string_list[0]
-        string_list[0] = string_list[len(string_list) - 1]
-        string_list[len(string_list) - 1] = temp
+        string_list[0], string_list[-1] = string_list[-1], string_list[0]
         string = ''.join(string_list)
     return chr(int(digits)) + string
 
