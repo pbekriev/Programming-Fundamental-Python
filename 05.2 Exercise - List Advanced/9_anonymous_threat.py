@@ -1,12 +1,8 @@
 def merge(list, start_index, end_index):
-    if start_index >= len(list):
-        start_index = len(list) - 1
-    elif start_index < -len(list):
-        start_index = -len(list)
+    if start_index < 0:
+        start_index = 0
     if end_index >= len(list):
         end_index = len(list) - 1
-    elif end_index < -len(list):
-        end_index = -len(list)
     if start_index != end_index:
         list[start_index:end_index + 1] = ["".join(list[start_index:end_index + 1])]
     return list
@@ -15,8 +11,8 @@ def merge(list, start_index, end_index):
 def divide(list, index, partitions):
     if index >= len(list):
         index = len(list) - 1
-    elif index < -len(list):
-        index = -len(list)
+    elif index < 0:
+        index = 0
     split_item = list.pop(index)
     split_list = []
     divider = len(split_item) // partitions
