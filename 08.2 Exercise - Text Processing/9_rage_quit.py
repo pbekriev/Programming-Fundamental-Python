@@ -8,5 +8,5 @@ for index in range(len(some_string)):
     else:
         output_string += some_string[last_index:index].upper() * int(some_string[index])
         last_index = index + 1
-print(f"Unique symbols used: {len(unique_chart)}")
+print(f"Unique symbols used: {len(set(unique_chart))}")
 print(output_string)
